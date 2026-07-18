@@ -2,10 +2,11 @@
   "schema": "ASOLARIA-OMEGA-TOURNAMENT-SEAT-V1",
   "seat": "relic",
   "branch": "tournament/relic",
-  "baseline_commit": "ec399b041e59115c90e823946bd2d1d44391d632",
+  "baseline_commit": "01640d0a07aebcc4f9909cbf93e73e01266ef79f",
   "local_matrix": "OPAQUE_NONREPLICATED",
-  "reflection_fields": ["A", "B"],
-  "normal_anti_binding": "UNRESOLVED",
-  "movable_flashlight_source_sha256": "c54763752e01ecbe0702c2e055fd69b70ad2d8e94979d74be2bd4b04ec1d9631",
+  "view_bindings": ["NORMAL", "ANTI"],
+  "view_binding_class": "OPERATOR_SPECIFIED",
+  "flashlight_projection_fields": ["A", "B"],
+  "movable_flashlight_source_sha256": "445677f416139ea9a5a7f07298ce362aad6bef5f742d8726570c00515efa08b4",
   "receipt_status": "PENDING_SEAT_RUN"
 }
