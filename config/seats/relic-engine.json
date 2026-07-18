@@ -2,7 +2,7 @@
   "schema": "ASOLARIA-RELIC-ENGINE-V1",
   "seat": "relic",
   "branch": "tournament/relic",
-  "status": "IMPLEMENTED_PENDING_CI",
+  "status": "MEASURED_CI_PUBLIC_FIXTURE",
   "engine": "FUSED_OMNIBIT_CUBE_ROUTE_V1",
   "local_matrix": "OPAQUE_NONREPLICATED",
   "input_boundary": "PUBLIC_FIXTURE_OR_DERIVED_COMMITMENT_ONLY",
@@ -25,6 +25,14 @@
     "logical_cube_descriptors": 320,
     "fused_streaming_payload_passes": 2,
     "materialize_topology": false
+  },
+  "ci_evidence": {
+    "head_commit": "5759782202b15aa0714bfdf0ae556b3ff482680b",
+    "workflow_run": 29648065281,
+    "python": ["3.11", "3.12", "3.13"],
+    "tests_run": 17,
+    "tests_ok": true,
+    "privacy_findings": 0
   },
   "claims": {
     "compression": false,
