@@ -20,3 +20,40 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m pip install -e ".[flashlight]"
       - run: python scripts/verify.py
+      - name: Verify LF-pinned HBP sidecars
+        run: |
+          (cd provenance && sha256sum -c SOURCE-LEDGER.hbp.sha256)
+          (cd contracts && sha256sum -c ARCHITECTURE.hbp.sha256)
+
+  rust-reference:
+    name: rust-reference (${{ matrix.id }})
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: floor
+            source: reference/omega-floor-codec-v0/omega_floor_codec_v0.rs
+            tests: 11
+          - id: operator-catalog
+            source: reference/omega-operator-catalog-v0/omega_operator_catalog.rs
+            tests: 18
+          - id: path123
+            source: reference/omega-path123-v0/omega_path123.rs
+            tests: 35
+          - id: hyper-codec
+            source: reference/omega-hyper-codec-integration-v0/omega_hyper_codec_v0.rs
+            tests: 34
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.81.0
+      - name: Compile pinned reference tests
+        run: rustc --edition=2021 --test -O "${{ matrix.source }}" -o "/tmp/${{ matrix.id }}-tests"
+      - name: Verify test census and execute
+        run: |
+          count=$("/tmp/${{ matrix.id }}-tests" --list | awk -F: '$NF ~ / test$/ {n++} END {print n+0}')
+          test "$count" -eq "${{ matrix.tests }}"
+          "/tmp/${{ matrix.id }}-tests" --nocapture

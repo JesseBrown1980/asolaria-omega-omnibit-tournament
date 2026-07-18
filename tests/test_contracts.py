@@ -32,12 +32,16 @@ class ContractTests(unittest.TestCase):
             "HUNDREDS_OF_MILLIONS",
         )
         self.assertNotIn(93312, self.config["reference_rungs"])
+        self.assertEqual(self.config["shared_omega_keys"]["count"], 27)
+        self.assertEqual(
+            self.config["shared_omega_keys"]["class"], "OPERATOR_SPECIFIED"
+        )
 
     def test_two_fields_make_six_registered_vantages(self) -> None:
         manifests = [build_manifest(self.config, seat) for seat in self.config["seats"]]
         vantages = [v for manifest in manifests for v in manifest["vantages"]]
         self.assertEqual(len(vantages), 6)
-        self.assertEqual({v["reflection_field"] for v in vantages}, {"A", "B"})
+        self.assertEqual({v["view_binding"] for v in vantages}, {"NORMAL", "ANTI"})
 
     def test_movable_flashlight_exports_commitment_only(self) -> None:
         result = move_probe(
