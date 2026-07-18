@@ -1,0 +1,29 @@
+{
+  "schema": "ASOLARIA-OMEGA-TOURNAMENT-V1",
+  "active_seat": "UNBOUND",
+  "seats": ["acer", "liris", "relic"],
+  "reflection_fields": [
+    {"id": "A", "normal_anti_binding": "UNRESOLVED"},
+    {"id": "B", "normal_anti_binding": "UNRESOLVED"}
+  ],
+  "reference_rungs": [2, 4, 8, 16, 32, 64, 256, 1024, 4096],
+  "implemented_recursive_floors": [64, 256, 1024, 4096],
+  "direction_families": {
+    "rnq": 8,
+    "tri": 12,
+    "pi_lens": 20
+  },
+  "topology_nodes_per_pass": 93312,
+  "logical_address_exponent": 100000000,
+  "historical_training_population": "HUNDREDS_OF_MILLIONS",
+  "shared_omega_keys": 27,
+  "unified_omega_keys": 1,
+  "glyph_levels": {"minimum_recalled": 48, "exact": false},
+  "operator_piece_arities": [5, 12, 14, 48, 96],
+  "dbbh_dbwh_direction_ports": 8,
+  "signed_traversal": [-1, 1],
+  "movable_flashlight": {
+    "mode": "DERIVED_COMMITMENT_ADAPTER",
+    "yesterday_harness_import": "PENDING_EXACT_SOURCE_BINDING"
+  }
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asolaria-omega-omnibit-tournament"
+version = "0.1.0"
+description = "Privacy-preserving three-seat recursive Omnibit tournament"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+flashlight = [
+  "matplotlib>=3.8,<4",
+  "numpy>=1.26,<3",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
