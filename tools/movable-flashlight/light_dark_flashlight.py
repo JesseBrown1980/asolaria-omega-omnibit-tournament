@@ -35,15 +35,6 @@ import argparse
 import sys
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import numpy as np
-
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common_track import gray_to_array, load_stream  # noqa: E402
-from hbp import CLAIMS_GATE, hbp_row, sha256_file, write_hbp_hbi  # noqa: E402
-
 SCHEMA = "ASOLARIA-VIDEO-LIGHT-DARK-FLASHLIGHT-V1"
 WINDOW = 10
 TOP_N_RENDER = 12
@@ -68,6 +59,12 @@ def render_window_png(
     min_proj: np.ndarray,
     title: str,
 ) -> None:
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import numpy as np
+
     fig, axes = plt.subplots(1, 4, figsize=(16, 4.2))
     fig.suptitle(title, fontsize=10)
 
@@ -100,6 +97,16 @@ def render_window_png(
 
 
 def main() -> int:
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from common_track import gray_to_array, load_stream
+    from hbp import CLAIMS_GATE, hbp_row, sha256_file, write_hbp_hbi
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--corpus", type=Path, required=True)
     parser.add_argument("--source-id", required=True)
