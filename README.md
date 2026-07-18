@@ -37,6 +37,18 @@ The three tournament branches are:
 - `tournament/liris`
 - `tournament/relic`
 
+## Public SGRAM boundary
+
+This repository is public by design so SGRAM consumers can clone, fetch, and
+stream the reviewed Git objects. Branch rules protect writes to `main`; they do
+not restrict public reads.
+
+Seat-local filesystems, corpora, matrices, model weights, credentials, and
+private keys never enter this Git history. Public code may exchange only
+reviewed executable adapters, derived commitments, allowlisted receipts, and
+Omega bindings. A commitment or catalog address is not authorization to fetch
+the private source behind it.
+
 ## Preserved axes
 
 - second-cascade topology: 93,312 nodes per pass;
@@ -64,14 +76,21 @@ darkening, not NORMAL/ANTI reflection fields.
 
 ```powershell
 python -m pip install -e ".[flashlight]"
-python .\scripts\verify.py
-python -m asolaria_tournament --config .\config\base.json
+python scripts/verify.py
+python scripts/verify_public_tree.py
+python scripts/verify_reference_hashes.py
+python scripts/verify_receipt_privacy.py
+python -m asolaria_tournament --config config/base.json
 ```
 
 Set `PYTHONPATH=src` if the package has not been installed.
 
 Reviewed Rust components are imported under `reference/` with their original
-layout and source hashes. Integration promotion requires:
+layout and source hashes. Rust `1.81.0` is the exact compatibility toolchain;
+later compiler versions are not used for these proof cells. CI independently
+checks every pinned byte, every HBI row against its paired HBP, and four Rust
+evidence suites. The stable `evidence-gate` check succeeds only when every
+owning job passes. Integration promotion requires:
 
 1. exact standalone replay;
 2. causal suffix-poison tests;
