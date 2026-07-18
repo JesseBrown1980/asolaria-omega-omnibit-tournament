@@ -1,0 +1,11 @@
+{
+  "schema": "ASOLARIA-OMEGA-TOURNAMENT-SEAT-V1",
+  "seat": "acer",
+  "branch": "tournament/acer",
+  "baseline_commit": "ec399b041e59115c90e823946bd2d1d44391d632",
+  "local_matrix": "OPAQUE_NONREPLICATED",
+  "reflection_fields": ["A", "B"],
+  "normal_anti_binding": "UNRESOLVED",
+  "movable_flashlight_source_sha256": "c54763752e01ecbe0702c2e055fd69b70ad2d8e94979d74be2bd4b04ec1d9631",
+  "receipt_status": "PENDING_SEAT_RUN"
+}
