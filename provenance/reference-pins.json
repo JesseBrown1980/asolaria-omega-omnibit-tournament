@@ -1,0 +1,82 @@
+{
+  "schema": "ASOLARIA-OMEGA-PUBLIC-REFERENCE-PINS-V1",
+  "classification": "PUBLIC_DERIVED_ARTIFACT_PINS",
+  "expected_files": 15,
+  "pins": [
+    {
+      "path": "reference/omega-floor-codec-contract-v0/INTEGRATED-OMEGA-FLOOR-CODEC-CONTRACT.hbp",
+      "bytes": 6753,
+      "sha256": "b2cb1a7e17eccf279021a22ca570a39bc18d2498f3babefb91343568121733bc"
+    },
+    {
+      "path": "reference/omega-floor-codec-v0/omega_floor_codec_v0.rs",
+      "bytes": 52686,
+      "sha256": "47dcf2f9f617f46fd8181257123f878b1fbf6cf8d7ec41119d27ea523bc64b08"
+    },
+    {
+      "path": "reference/omega-operator-catalog-v0/omega_operator_catalog.rs",
+      "bytes": 26012,
+      "sha256": "883ca7ec964e609933c3cb9ac71d1f9fb02ade9f314f7902d0c0547dd3da6e1b"
+    },
+    {
+      "path": "reference/omega-path123-v0/omega_path123.rs",
+      "bytes": 78503,
+      "sha256": "d475f067529f2bb8d99d09c835afb7ab9669b0e1ea2c73c4064184c5589da333"
+    },
+    {
+      "path": "reference/omega-hyper-codec-integration-v0/omega_hyper_codec_v0.rs",
+      "bytes": 59613,
+      "sha256": "3784fc1730ee962e2733d36a2d7443056e8c4c2768d2b3336fc61b2eeceb3080"
+    },
+    {
+      "path": "tools/movable-flashlight/light_dark_flashlight.py",
+      "bytes": 12358,
+      "sha256": "445677f416139ea9a5a7f07298ce362aad6bef5f742d8726570c00515efa08b4"
+    },
+    {
+      "path": "tools/movable-flashlight/common_track.py",
+      "bytes": 5379,
+      "sha256": "cea84f2ce01d889527c33729c3e6912c3e61d0c546e311e27f3fce3ae36b2ce4"
+    },
+    {
+      "path": "tools/movable-flashlight/hbp.py",
+      "bytes": 6708,
+      "sha256": "937335c6dc49b775646f05742081175b318cc6512f3667f727a0bc7fe8e9a00f"
+    },
+    {
+      "path": "provenance/receipts/omega-floor/OMEGA-FLOOR-CODEC-V0-VERIFY.hbp",
+      "bytes": 5588,
+      "sha256": "ebd5d1b8716ca63ba7023198d94e6e8110ef35e3a4cca6e734eb8c1245a1191e"
+    },
+    {
+      "path": "provenance/receipts/omega-floor/OMEGA-FLOOR-CODEC-V0-VERIFY.hbi",
+      "bytes": 13163,
+      "sha256": "6654a2f943ddb7e9ef6edec40f4628c8d199d5ff4aeef57e94c5d71ed84d8c6a"
+    },
+    {
+      "path": "provenance/receipts/operator-catalog/OPERATOR-CATALOG.hbp",
+      "bytes": 2400,
+      "sha256": "47bfb80f0cd2b1da7745f01fa0964714d1a6dcd9391d841823b5b4a0c930d6cb"
+    },
+    {
+      "path": "provenance/receipts/path123/OMEGA-PATH123-COMPONENT.hbp",
+      "bytes": 1841,
+      "sha256": "5c1454b8e4768c98b1cdc2b2c4f8b78289caf9475475005afe76814dec96f9a3"
+    },
+    {
+      "path": "provenance/receipts/path123/OMEGA-PATH123-COMPONENT.hbi",
+      "bytes": 4701,
+      "sha256": "3f559627386a148d84b2404575e2f55533e2573bc0a0202d4fa205f091651f04"
+    },
+    {
+      "path": "provenance/receipts/movable-flashlight/FLASHLIGHT-star_oe9.hbp",
+      "bytes": 212175,
+      "sha256": "f58e3e44940271d33c0b1b41c67fee967547484de17a7af536d3d137ef16f889"
+    },
+    {
+      "path": "provenance/receipts/movable-flashlight/FLASHLIGHT-star_oe9.hbi",
+      "bytes": 125499,
+      "sha256": "a11f246d70e71e7789ea13f8bd59148ccc9da52c23699f98440716b266a42b62"
+    }
+  ]
+}

@@ -6,12 +6,15 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
 from asolaria_tournament.commitment import canonical_commitment
 from asolaria_tournament.flashlight import FlashlightProbe, move_probe
 from asolaria_tournament.privacy import forbidden_text_matches, violations
 from asolaria_tournament.tournament import build_manifest
+from scripts.verify_public_tree import forbidden_path_component
+from scripts.verify_receipt_privacy import parse_sha256_sidecar, receipt_kind
 
 
 class ContractTests(unittest.TestCase):
@@ -65,6 +68,30 @@ class ContractTests(unittest.TestCase):
 
     def test_repository_passes_privacy_gate(self) -> None:
         self.assertEqual(violations(ROOT), [])
+
+    def test_public_tree_rejects_private_storage_roots(self) -> None:
+        for root in (
+            "corpus",
+            "matrices",
+            "weights",
+            "models",
+            "private",
+            "secrets",
+            "local",
+            "runs",
+        ):
+            self.assertEqual(forbidden_path_component(f"{root}/fixture.txt"), root)
+        self.assertIsNone(forbidden_path_component("provenance/receipts/public.hbp"))
+
+    def test_receipt_sha256_sidecar_contract(self) -> None:
+        digest = "a" * 64
+        self.assertEqual(
+            parse_sha256_sidecar(f"{digest} *receipt.hbp\n", "receipt.hbp"),
+            digest,
+        )
+        self.assertEqual(receipt_kind(Path("receipt.hbp.sha256")), "sidecar")
+        with self.assertRaises(ValueError):
+            parse_sha256_sidecar(f"{digest} *other.hbp\n", "receipt.hbp")
 
 
 if __name__ == "__main__":

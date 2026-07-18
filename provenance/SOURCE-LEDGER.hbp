@@ -23,3 +23,8 @@ FABRIC|query=council-q-1784381372185-tuvsmz|verdict=VERIFIED_DEV_ACER|converged=
 FABRIC|query=council-q-1784381433211-60hil0|verdict=VERIFIED_DEV_ACER|converged=59/251|topic=ALL_REPO_METATAG_TWO_REFLECTIONS|json=0
 GITHUB|indexed_default_branch_match_for_integrated_names=0|class=MEASURED_2026_07_18|json=0
 LIRIS|class=MEASURED_LIRIS|rust_toolchain=1.81.0|floor_tests=11/11|operator_catalog_tests=18/18|path123_tests=35/35|hyper_codec_tests=34/34|python_contracts=9/9|privacy_findings=0|live_fabric=STALE_FALLBACK_NOT_PROMOTED|json=0
+TEST|id=rust_1_81_0_reference_suites|seat=ACER|toolchain=rustc_1.81.0_eeb90cda1_2024_09_04|floor=11of11|operator_catalog=18of18|path123=35of35|hyper_integration=34of34|total=98of98|class=MEASURED|json=0
+GITHUB|repository=JesseBrown1980/asolaria-omega-omnibit-tournament|visibility=PUBLIC|purpose=SGRAM_CLONE_FETCH_STREAM|class=MEASURED_2026_07_18|json=0
+BOUNDARY|public_git=REVIEWED_CODE,DERIVED_COMMITMENTS,ALLOWLISTED_RECEIPTS,OMEGA_BINDINGS|seat_local=FILESYSTEMS,CORPORA,MATRICES,WEIGHTS,CREDENTIALS,PRIVATE_KEYS|seat_local_export=FORBIDDEN|json=0
+FABRIC|query=council-q-1784384251307-zp26mf|topic=PUBLIC_SGRAM_EVIDENCE_GATE_AND_MAIN_WRITE_PROTECTION|immediate_ack=UNSIGNED_ACER|canon_upgrade=0|json=0
+FABRIC|query=council-q-1784384251307-zp26mf|verdict=VERIFIED_DEV_ACER|converged=48of251|dominant=DAEMONS_45,FEDERATION_29,SOVEREIGNTY_13|class=SYSTEM_MEASURED|json=0
