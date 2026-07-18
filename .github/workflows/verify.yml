@@ -54,6 +54,6 @@ jobs:
         run: rustc --edition=2021 --test -O "${{ matrix.source }}" -o "/tmp/${{ matrix.id }}-tests"
       - name: Verify test census and execute
         run: |
-          count=$("/tmp/${{ matrix.id }}-tests" --list | awk -F: '$2 ~ / test$/ {n++} END {print n+0}')
+          count=$("/tmp/${{ matrix.id }}-tests" --list | awk -F: '$NF ~ / test$/ {n++} END {print n+0}')
           test "$count" -eq "${{ matrix.tests }}"
           "/tmp/${{ matrix.id }}-tests" --nocapture
