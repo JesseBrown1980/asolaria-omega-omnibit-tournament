@@ -213,14 +213,14 @@ def transform_chunks(
     """
     block_index = 0
     mask = b""
-    mask_offset = MASK_BLOCK_BYTES
+    mask_offset = 0
 
     for chunk in chunks:
         source = bytes(chunk)
         output = bytearray(len(source))
         cursor = 0
         while cursor < len(source):
-            if mask_offset == len(mask):
+            if mask_offset >= len(mask):
                 mask = _mask_block(route, omega_ledger, block_index)
                 block_index += 1
                 mask_offset = 0
