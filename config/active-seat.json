@@ -8,5 +8,12 @@
   "view_binding_class": "OPERATOR_SPECIFIED",
   "flashlight_projection_fields": ["A", "B"],
   "movable_flashlight_source_sha256": "445677f416139ea9a5a7f07298ce362aad6bef5f742d8726570c00515efa08b4",
-  "receipt_status": "PENDING_SEAT_RUN"
+  "receipt_status": "MEASURED_GITHUB_CI_PUBLIC_FIXTURE",
+  "receipt_vantage": "GITHUB_ACTIONS_INTEGRATED_FROM_LIRIS",
+  "receipt_scope": "A_B_ENGINE_FIELDS_NOT_NORMAL_ANTI_BINDING",
+  "normal_anti_seat_receipt_status": "PENDING_RELIC_SEAT_RUN",
+  "ci_head_commit": "5759782202b15aa0714bfdf0ae556b3ff482680b",
+  "ci_workflow_run": 29648065281,
+  "tests_run": 17,
+  "privacy_findings": 0
 }
