@@ -7,5 +7,9 @@
   "reflection_fields": ["A", "B"],
   "normal_anti_binding": "UNRESOLVED",
   "movable_flashlight_source_sha256": "c54763752e01ecbe0702c2e055fd69b70ad2d8e94979d74be2bd4b04ec1d9631",
-  "receipt_status": "PENDING_SEAT_RUN"
+  "receipt_status": "MEASURED_CI_PUBLIC_FIXTURE",
+  "ci_head_commit": "5759782202b15aa0714bfdf0ae556b3ff482680b",
+  "ci_workflow_run": 29648065281,
+  "tests_run": 17,
+  "privacy_findings": 0
 }
