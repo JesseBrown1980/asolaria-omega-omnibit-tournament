@@ -1,4 +1,4 @@
-"""Build privacy-safe three-seat, two-field tournament manifests."""
+"""Build privacy-safe three-seat, NORMAL/ANTI tournament manifests."""
 
 from __future__ import annotations
 
@@ -11,9 +11,9 @@ from .commitment import canonical_commitment
 def build_manifest(config: dict[str, Any], seat: str) -> dict[str, Any]:
     if seat not in config["seats"]:
         raise ValueError("seat is not registered")
-    fields = [item["id"] for item in config["reflection_fields"]]
-    if fields != ["A", "B"]:
-        raise ValueError("exactly ordered reflection fields A/B are required")
+    views = [item["id"] for item in config["view_bindings"]]
+    if views != ["NORMAL", "ANTI"]:
+        raise ValueError("exactly ordered NORMAL/ANTI view bindings are required")
 
     public = deepcopy(config)
     public["active_seat"] = seat
@@ -21,10 +21,10 @@ def build_manifest(config: dict[str, Any], seat: str) -> dict[str, Any]:
     public["vantages"] = [
         {
             "seat": seat,
-            "reflection_field": field,
-            "normal_anti_binding": "UNRESOLVED",
+            "view_binding": view,
+            "class": "OPERATOR_SPECIFIED",
         }
-        for field in fields
+        for view in views
     ]
     public["manifest_commitment"] = canonical_commitment(
         "ASOLARIA-TOURNAMENT-MANIFEST-V1", public

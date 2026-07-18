@@ -6,7 +6,7 @@ The repository uses a narrow exchange boundary:
 opaque seat matrix
     -> local quant/formula/glyph computation
     -> allowlisted derived commitment
-    -> reflection field A or B
+    -> operator-specified NORMAL or ANTI traversal
     -> movable-flashlight probe
     -> recursive floor tournament
     -> Unified Omega commitment
@@ -23,15 +23,13 @@ and next-floor seed; it is not learned state.
 Rungs 2, 4, 8, 16, and 32 remain reference/design rungs until an implementation
 and receipt bind them into the exact recursive archive.
 
-## Two fields, three seats
+## Two traversals, three seats
 
-The two giant reflection fields are represented conservatively as A and B.
-Applying A/B independently at Acer, Liris, and Relic yields six tournament
-vantages. `NORMAL/ANTI` is retained as an operator hypothesis, not silently
-promoted to a code fact. The closest recovered two-level semantics are
-self-reflection and fabric-reflection. A signed `+g/-g` receipt collapses
-those signs to the same transform, so it cannot be used to manufacture six
-distinct decoders.
+NORMAL and ANTI are operator-specified tournament traversals. Applying both at
+Acer, Liris, and Relic yields six vantages. This is a typed experiment binding,
+not a claim that an older A/B, DBBH/DBWH, BLACK/WHITE, self/fabric reflection,
+or signed `+g/-g` pair already implements the same transform. Those axes remain
+separate until an exact adapter and receipt bind them.
 
 ## Movable flashlight
 
@@ -39,12 +37,13 @@ The adapter moves a probe through a declared direction, PID, rung, reflection
 field, and Omega binding. Its public output is a domain-separated commitment.
 It never reads or exports the local slice.
 
-The exact untracked July 17 instrument is now pinned separately at source SHA
-`c5476375...d9631`. It processes ten-frame windows using signed endpoint
+The exact July 17 upstream instrument is pinned at source SHA
+`c5476375...d9631`; the public lazy-import adaptation is pinned at
+`445677f4...08b4`. It processes ten-frame windows using signed endpoint
 differences, accumulated absolute differences, and a minimum-intensity
 projection over left/center/right thirds. Its sign is pixel intensity only.
-It has no seat, reflection, NORMAL, or ANTI field, so integration with A/B is a
-new adapter task rather than a reinterpretation of its measurements.
+It has no NORMAL or ANTI semantics. Its A/B projection fields remain an
+independent adapter axis rather than a reinterpretation of pixel measurements.
 
 ## Stacked cubes
 

@@ -13,6 +13,11 @@ It deliberately separates four things that older work sometimes collapsed:
 The target is a standalone, causal, lossless Wikipedia codec. The current
 baseline is not a Hutter Prize result and makes no physical-quantum claim.
 
+This is a **public SGRAM/GitRAM surface**: code, contracts, source pins,
+derived commitments, and reviewed receipts remain publicly streamable. Raw
+seat filesystems, corpora, matrices, credentials, and private key material are
+excluded; their absence is a privacy boundary, not a private-repository mode.
+
 ## Tournament topology
 
 - Seats: Acer, Liris, Relic.
@@ -20,11 +25,11 @@ baseline is not a Hutter Prize result and makes no physical-quantum claim.
   private and non-replicated.
 - Git carries only reviewed code, derived commitments, allowlisted receipts,
   public fixtures, and explicit Omega bindings.
-- Exactly two reflection fields are represented as `A` and `B`. The
-  operator hypothesis that these mean NORMAL/ANTI is recorded but remains
-  unbound until a receipt or implementation proves the mapping.
-- Each seat branch evaluates both fields. Together this gives six vantages
-  without copying any seat-local matrix.
+- Each seat branch evaluates the operator-specified `NORMAL` and `ANTI`
+  traversal views. Three seats times two views gives six public tournament
+  vantages without copying a seat-local matrix.
+- The flashlight's `A/B` light/dark projection fields remain a separate axis;
+  they are not silently renamed NORMAL/ANTI or DBBH/DBWH.
 
 The three tournament branches are:
 
@@ -38,7 +43,8 @@ The three tournament branches are:
 - symbolic logical-address ceiling: `10^(100,000,000)`;
 - executed/harvested population: hundreds of millions, a separate axis;
 - reference rungs: 2, 4, 8, 16, 32, 64, 256, 1024, 4096;
-- Omega bindings: 27 shared keys plus one Unified Omega key;
+- Omega bindings: 27 shared keys plus one Unified Omega key
+  (`OPERATOR_SPECIFIED`; exact implementation binding unresolved and counted);
 - glyph levels: operator recalls 48 or more; exact enumeration is unresolved;
 - view families: 3, 6, 12, 24, pi-like, and N;
 - operator candidate piece arities: 5, 12, 14, 48, 96, and further values;
@@ -50,7 +56,9 @@ The three tournament branches are:
 The Python baseline creates privacy-safe tournament manifests and
 domain-separated commitments. It never reads a corpus or local matrix.
 The exact July 17 light/dark flashlight source and its two pinned helpers are
-imported under `tools/movable-flashlight/`. That instrument computes
+imported under `tools/movable-flashlight/`. A public lazy-import adaptation
+keeps its geometry contract importable without optional plotting packages;
+both upstream and adapted hashes are pinned. That instrument computes
 10-frame pixel windows; its positive/negative values mean lightening and
 darkening, not NORMAL/ANTI reflection fields.
 
