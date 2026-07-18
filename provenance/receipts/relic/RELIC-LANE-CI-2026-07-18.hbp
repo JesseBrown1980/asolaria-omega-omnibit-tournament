@@ -1,0 +1,8 @@
+RELICCIHDR|schema=ASOLARIA-RELIC-LANE-CI-RECEIPT-V1|date=2026-07-18|seat=RELIC|branch=tournament/relic|evidence=MEASURED_CI_PUBLIC_FIXTURE|json=0
+RELICCICOMMIT|head_commit=5759782202b15aa0714bfdf0ae556b3ff482680b|workflow=verify|workflow_run=29648065281|conclusion=success|json=0
+RELICCIMATRIX|python=3.11,3.12,3.13|jobs=3|jobs_passed=3|jobs_failed=0|json=0
+RELICCIVERIFY|tests_run=17|tests_ok=1|privacy_findings=0|ok=1|measured_duration_seconds_python311=1.294|json=0
+RELICCUBE|floors=64,256,1024,4096|directions_per_floor=40|cubes_per_field=160|fields=A,B|fused_payload_passes=2|json=0
+RELICOMEGA|shared_binding_commitments=27|unified_roots=1|secret_material=0|json=0
+RELICBOUNDARY|scope=PUBLIC_FIXTURE_BASELINE|local_matrix_accessed=0|raw_share=0|normal_anti_binding=UNRESOLVED|json=0
+RELICCLAIM|compression_claim=0|hutter_result=0|physical_claim=0|whole_wikipedia_replay=UNVERIFIED|json=0
