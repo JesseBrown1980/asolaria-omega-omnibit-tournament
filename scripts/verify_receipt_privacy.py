@@ -17,6 +17,51 @@ MAX_RECEIPT_BYTES = 500_000
 ABSOLUTE_WINDOWS_PATH = re.compile(r"(?i)\b[A-Z]:\\")
 MOUNTED_WINDOWS_PATH = re.compile(r"(?i)/" + r"mnt/[a-z]/")
 PHYSICAL_DEVICE = re.compile(r"(?i)Physical" + r"Drive\d+")
+SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+
+
+def receipt_kind(path: Path) -> str | None:
+    name = path.name.lower()
+    if name.endswith((".hbp.sha256", ".hbi.sha256")):
+        return "sidecar"
+    if name.endswith(".hbp"):
+        return "hbp"
+    if name.endswith(".hbi"):
+        return "hbi"
+    return None
+
+
+def parse_sha256_sidecar(text: str, target_name: str) -> str:
+    items = text.strip().split()
+    if len(items) != 2:
+        raise ValueError("sidecar must contain exactly hash and filename")
+    expected_sha = items[0].lower()
+    named_file = items[1].lstrip("*")
+    if not SHA256_RE.fullmatch(expected_sha):
+        raise ValueError("sidecar hash is not lowercase SHA-256")
+    if named_file != target_name:
+        raise ValueError("sidecar filename does not match target")
+    return expected_sha
+
+
+def verify_sha256_sidecar(sidecar_path: Path, failures: list[str]) -> None:
+    relative = sidecar_path.relative_to(ROOT).as_posix()
+    target = sidecar_path.with_suffix("")
+    if not target.is_file():
+        failures.append(f"{relative}: missing sidecar target")
+        return
+    try:
+        expected_sha = parse_sha256_sidecar(
+            sidecar_path.read_text(encoding="ascii"), target.name
+        )
+    except (UnicodeDecodeError, ValueError) as error:
+        failures.append(f"{relative}: invalid sidecar: {error}")
+        return
+    actual_sha = hashlib.sha256(target.read_bytes()).hexdigest()
+    if actual_sha != expected_sha:
+        failures.append(
+            f"{relative}: sidecar hash mismatch {expected_sha} != {actual_sha}"
+        )
 
 
 def fields(line: str) -> dict[str, str]:
@@ -76,9 +121,11 @@ def main() -> int:
     receipt_files = sorted(path for path in RECEIPTS.rglob("*") if path.is_file())
     hbi_pairs = 0
     hbi_rows = 0
+    sidecars = 0
     for path in receipt_files:
         relative = path.relative_to(ROOT).as_posix()
-        if path.suffix.lower() not in {".hbp", ".hbi"}:
+        kind = receipt_kind(path)
+        if kind is None:
             failures.append(f"{relative}: unexpected receipt suffix")
             continue
         data = path.read_bytes()
@@ -108,16 +155,20 @@ def main() -> int:
         )
         for match in matches:
             failures.append(f"{relative}: privacy match {match}")
-        if path.suffix.lower() == ".hbi":
+        if kind == "hbi":
             hbi_pairs += 1
             hbi_rows += verify_hbi(path, failures)
+        elif kind == "sidecar":
+            sidecars += 1
+            verify_sha256_sidecar(path, failures)
 
     for failure in failures:
         print(f"RECEIPTFAIL|message={failure}|json=0")
     ok = not failures
     print(
-        f"RECEIPTPRIVACY|files={len(receipt_files)}|hbi_pairs={hbi_pairs}|"
-        f"hbi_rows={hbi_rows}|findings={len(failures)}|ok={int(ok)}|json=0"
+        f"RECEIPTPRIVACY|files={len(receipt_files)}|sidecars={sidecars}|"
+        f"hbi_pairs={hbi_pairs}|hbi_rows={hbi_rows}|findings={len(failures)}|"
+        f"ok={int(ok)}|json=0"
     )
     return 0 if ok else 1
 
