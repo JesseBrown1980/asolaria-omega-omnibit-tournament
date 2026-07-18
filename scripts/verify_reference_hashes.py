@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +21,7 @@ SIDECARS = (
     ),
 )
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+PIN_ROOTS = ("reference", "tools/movable-flashlight", "provenance/receipts")
 
 
 def sha256(data: bytes) -> str:
@@ -29,6 +31,20 @@ def sha256(data: bytes) -> str:
 def fail(message: str, failures: list[str]) -> None:
     failures.append(message)
     print(f"PINFAIL|message={message}|json=0")
+
+
+def indexed_pin_scope() -> set[str]:
+    process = subprocess.run(
+        ["git", "ls-files", "-z", "--", *PIN_ROOTS],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    )
+    return {
+        item.decode("utf-8")
+        for item in process.stdout.split(b"\x00")
+        if item
+    }
 
 
 def verify_pins(failures: list[str]) -> int:
@@ -91,6 +107,12 @@ def verify_pins(failures: list[str]) -> int:
         print(
             f"PINPASS|path={relative}|bytes={len(data)}|sha256={actual_sha}|json=0"
         )
+
+    indexed = indexed_pin_scope()
+    for relative in sorted(indexed - seen):
+        fail(f"unregistered_public_artifact:{relative}", failures)
+    for relative in sorted(seen - indexed):
+        fail(f"pin_not_git_indexed:{relative}", failures)
     return verified
 
 
