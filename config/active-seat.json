@@ -1,0 +1,15 @@
+{
+  "schema": "ASOLARIA-OMEGA-TOURNAMENT-SEAT-V1",
+  "seat": "acer",
+  "branch": "codex/acer-glyph-recalculate-codec-20260718",
+  "baseline_commit": "925fa316b8bb914f991fb202e2cd8f77e7dd8cd8",
+  "local_matrix": "OPAQUE_NONREPLICATED",
+  "view_bindings": ["NORMAL", "ANTI"],
+  "view_binding_class": "DESIGN_SOFTWARE_PROJECTION",
+  "flashlight_projection_fields": ["A", "B"],
+  "flashlight_axis_binding": "SEPARATE_FROM_CODEC_A_B",
+  "codec_contract": "contracts/ACER-GLYPH-CODEC-V1.hbp",
+  "catalog_mode": "ONLINE_REBUILT_CATALOG",
+  "receipt_status": "MEASURED_LOCAL_RESEARCH_CELL_UNPUBLISHED",
+  "publication": "HOLD"
+}

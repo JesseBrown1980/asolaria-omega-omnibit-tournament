@@ -1,0 +1,145 @@
+{
+  "schema": "ASOLARIA-ACER-GLYPH-CODEC-V1",
+  "artifact_class": "DESIGN",
+  "cell": "RESEARCH_CODEC_CELL",
+  "seat": "acer",
+  "publication": "HOLD",
+  "runtime": {
+    "research_language": "python",
+    "research_minimum_version": "3.11",
+    "publication_target_language": "rust",
+    "publication_target_toolchain": "1.81.0",
+    "newer_rust_toolchains_authorized": false,
+    "python_runtime_counted": false,
+    "hutter_eligible": false,
+    "submission_form": "UNRESOLVED_EXECUTABLE_OR_SOURCE_ZIP",
+    "python_runtime_or_source_build_treatment": "UNRESOLVED"
+  },
+  "privacy": {
+    "local_matrix": "OPAQUE_NONREPLICATED",
+    "decode_external_oracle": false,
+    "public_inputs": [
+      "CHARGED_ARCHIVE",
+      "CHARGED_COMPRESSOR",
+      "CHARGED_DECODER",
+      "CHARGED_CATALOG_OR_MINT_STATE",
+      "CHARGED_COMMAND_LINE_IF_REQUIRED"
+    ]
+  },
+  "language": {
+    "target_glyph_kind": "EXECUTABLE_FUNCTION_TOKEN",
+    "declared_scaffold_roles": ["NOUN", "WORD"],
+    "declared_fixed_verbs": ["EMIT", "CONCAT", "CATALOG_INSERT"],
+    "archive_semantic_opcode_binding": "HELD",
+    "tuple60_status": "TYPE_ONLY_SEMANTIC_BINDING_HELD",
+    "trained_noun_verb_word_language": "HELD",
+    "reference_alphabet_rungs": [2, 4, 8, 16, 32, 64, 256, 1024, 4096],
+    "tuple_dim": 60,
+    "catalog_tuple_count_hint": {
+      "value": 3200,
+      "class": "OPERATOR_SPECIFIED_UNRESOLVED",
+      "unit": "UNRESOLVED",
+      "binding": "NOT_PACKET_BYTES"
+    }
+  },
+  "catalog_modes": {
+    "active": "ONLINE_REBUILT_CATALOG",
+    "online_rebuilt_catalog": {
+      "initial_state": "FIXED_SINGLETON_BASE_ALPHABETS_PER_BLOCK",
+      "base_alphabets": [256, 1024],
+      "custom_or_empty_base_mode": false,
+      "update_source": "DECODED_RESIDUAL_PREFIX_WITHIN_BLOCK",
+      "deterministic": true
+    },
+    "later_trained_mint": {
+      "status": "HELD",
+      "training_may_use_wikipedia": true,
+      "decode_may_read_wikipedia": false,
+      "all_mint_state_must_be_charged": true
+    }
+  },
+  "quant8_route_tail": {
+    "bytes": 3200,
+    "binding": "ORIGINAL_FIXED_PACKET",
+    "is_catalog_tuple_count": false,
+    "is_complete_reconstruction_payload": false
+  },
+  "direction_design": {
+    "sector_families": [6, 12, 24],
+    "family_selector_union": 42,
+    "selector_basis": "PRIME_LAG_SELECTOR_SET_42",
+    "prime_lags": [
+      2, 3, 5, 7, 11, 13,
+      17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
+      67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181
+    ],
+    "projection_fields": ["A", "B"],
+    "traversals": ["NORMAL", "ANTI"],
+    "typed_union_cells": 168,
+    "typed_union_formula": "(6+12+24)*2*2",
+    "nested_cartesian_cells": 6912,
+    "nested_cartesian_formula": "6*12*24*2*2",
+    "nested_cartesian_status": "HELD_NOT_MATERIALIZED",
+    "second_cascade_topology_nodes_per_pass": 93312,
+    "second_cascade_formula": "6*6*6*6*6*12",
+    "topology_axis_independent": true
+  },
+  "software_projection_semantics": {
+    "class": "DESIGN",
+    "distinct_from_july17_flashlight_pixel_fields": true,
+    "predictor": {
+      "NORMAL": "CAUSAL_PRIME_LAG_PREDICTOR_BYTE",
+      "ANTI": "BIT_REVERSE_8_OF_CAUSAL_PRIME_LAG_PREDICTOR_BYTE"
+    },
+    "A": "XOR_RESIDUAL_INPUT_BYTE_WITH_PREDICTOR_BYTE",
+    "B": "MOD_256_DELTA_INPUT_BYTE_MINUS_PREDICTOR_BYTE"
+  },
+  "archive": {
+    "mode": "STRICT_FORWARD_ONLY_FRAMED_IN_MEMORY_V1",
+    "causal_state": "DECODED_PREFIX_ONLY",
+    "selector": "PREFIX_ONLY_EXPLICIT_AND_CHARGED",
+    "fallback": "RAW_RESIDUAL",
+    "omega": "SELF_CONSISTENCY_COMMITMENT_NOT_PAYLOAD_OR_AUTHENTICITY",
+    "max_archive_bytes": 1500000000,
+    "byte_charge": [
+      "COMPRESSOR_EXECUTABLE_OR_SOURCE_ZIP",
+      "DECODER_EXECUTABLE",
+      "ARCHIVE_HEADER",
+      "SELECTORS",
+      "RESIDUALS",
+      "RAW_LITERALS",
+      "CATALOG_OR_MINT_STATE",
+      "TABLES",
+      "SEEDS",
+      "OMEGA_MANIFESTS",
+      "COMMAND_LINE_IF_REQUIRED"
+    ]
+  },
+  "hutter_accounting": {
+    "status": "HELD_INCOMPLETE_ARTIFACT_CENSUS",
+    "self_extracting_formula": "COMPRESSOR_PLUS_SELF_EXTRACTING_ARCHIVE",
+    "separate_codec_formula": "COMPRESSOR_PLUS_2X_DECODER_PLUS_ARCHIVE",
+    "same_compressor_decoder_formula": "COMPRESSOR_PLUS_1X_DECODER_PLUS_ARCHIVE",
+    "command_line_bytes": "UNMEASURED",
+    "additional_required_artifacts": "UNRESOLVED",
+    "current_research_metric": "ARCHIVE_PLUS_ONE_DECODER_ONLY_NOT_A_HUTTER_SCORE"
+  },
+  "invariants": [
+    "TARGET_EXACT_REPLAY_WITH_CHARGED_SELECTOR_RESIDUAL",
+    "ACCEPTED_DOMAIN_COLLISION_FREE",
+    "INTERNAL_PROJECTIONS_MAY_BE_MANY_TO_ONE",
+    "RESIDUAL_COMPLETES_DISCARDED_DISTINCTIONS",
+    "CATALOG_REBUILT_FROM_DECODED_PREFIX",
+    "CAUSAL_STATE_PREFIX_ONLY",
+    "SELECTOR_EXPLICIT_AND_CHARGED",
+    "OMEGA_SELF_CONSISTENCY_COMMITMENT_NOT_PAYLOAD",
+    "ALL_REQUIRED_STATE_COUNTED",
+    "GC_SAFE_TRANSIENT_STATE_ONLY"
+  ],
+  "compression_evidence": "PENDING_CHARGED_BENCHMARK",
+  "physical_claims": {
+    "quantum_operation": false,
+    "no_cloning_theorem_bypass": false,
+    "arxiv_2602_10695_use": "ARCHITECTURE_ANALOGY_ONLY"
+  }
+}

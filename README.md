@@ -74,12 +74,35 @@ both upstream and adapted hashes are pinned. That instrument computes
 10-frame pixel windows; its positive/negative values mean lightening and
 darkening, not NORMAL/ANTI reflection fields.
 
+The Acer research cell now adds a separately typed recalculation control. Its
+language scaffold declares `NOUN`/`WORD` roles and
+`EMIT`/`CONCAT`/`CATALOG_INSERT` verbs, but the archive does not yet carry
+semantic glyph opcodes or tuple commands. The active codec rebuilds frozen
+256 -> 1024 -> 4096 numeric phrase catalogs during decode and selects the next
+block view only from the previous decoded block. Its
+direction family, NORMAL/ANTI traversal, and software A/B residual field are
+independent selector axes: `(6 + 12 + 24) * 2 * 2 = 168` candidates. These
+software A/B fields are not the movable-flashlight pixel A/B fields.
+
+The strict archive carries every selector and residual, has a raw-residual
+fallback, chains each block into a Unified Omega self-consistency commitment,
+and rejects malformed codes, non-self-consistent mutation, truncation, and
+trailing bytes. The unkeyed chain is not authenticity without a separately
+trusted signed root. A
+local synthetic isolated-bundle run restored exactly, but the charged bundle
+was larger than its source. It is therefore a measured exact research cell,
+not a trained glyph language, compression evidence, or a Hutter result. See
+[ACER-GLYPH-CODEC-V1.md](docs/ACER-GLYPH-CODEC-V1.md).
+The privacy-safe local source census and integration order are recorded in
+[ACER-IMPLEMENTATION-MAP-2026-07-18.md](docs/ACER-IMPLEMENTATION-MAP-2026-07-18.md).
+
 ```powershell
 python -m pip install -e ".[flashlight]"
 python scripts/verify.py
 python scripts/verify_public_tree.py
 python scripts/verify_reference_hashes.py
 python scripts/verify_receipt_privacy.py
+python scripts/verify_acer_offline.py
 python -m asolaria_tournament --config config/base.json
 ```
 
