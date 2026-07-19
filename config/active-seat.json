@@ -10,6 +10,7 @@
   "flashlight_axis_binding": "SEPARATE_FROM_CODEC_A_B",
   "codec_contract": "contracts/ACER-GLYPH-CODEC-V1.hbp",
   "catalog_mode": "ONLINE_REBUILT_CATALOG",
+  "receipt": "provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbp",
   "receipt_status": "MEASURED_LOCAL_RESEARCH_CELL_UNPUBLISHED",
   "publication": "HOLD"
 }

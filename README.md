@@ -95,6 +95,9 @@ not a trained glyph language, compression evidence, or a Hutter result. See
 [ACER-GLYPH-CODEC-V1.md](docs/ACER-GLYPH-CODEC-V1.md).
 The privacy-safe local source census and integration order are recorded in
 [ACER-IMPLEMENTATION-MAP-2026-07-18.md](docs/ACER-IMPLEMENTATION-MAP-2026-07-18.md).
+The exact local replay, byte census, negative compression result, and held
+Hutter boundary are sealed in
+[ACER-GLYPH-CODEC-V1-VERIFY.hbp](provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbp).
 
 ```powershell
 python -m pip install -e ".[flashlight]"
