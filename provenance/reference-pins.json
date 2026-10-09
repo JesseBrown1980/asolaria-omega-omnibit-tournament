@@ -1,7 +1,7 @@
 {
   "schema": "ASOLARIA-OMEGA-PUBLIC-REFERENCE-PINS-V1",
   "classification": "PUBLIC_DERIVED_ARTIFACT_PINS",
-  "expected_files": 19,
+  "expected_files": 25,
   "pins": [
     {
       "path": "reference/omega-floor-codec-contract-v0/INTEGRATED-OMEGA-FLOOR-CODEC-CONTRACT.hbp",
@@ -97,6 +97,36 @@
       "path": "provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbi.sha256",
       "bytes": 97,
       "sha256": "d4ce44f8c0cd8e6e6d95a5ac942ce80c2611ffb1bd6a0427c33b6b585f53ffc4"
+    },
+    {
+      "path": "provenance/receipts/relic/RELIC-LANE-CI-2026-07-18.hbp",
+      "bytes": 1026,
+      "sha256": "ab1ef90525c5ad57204845458e04699df5da6cab7441f0411af5d2d23aff2d19"
+    },
+    {
+      "path": "provenance/receipts/relic/RELIC-LANE-CI-2026-07-18.hbp.sha256",
+      "bytes": 95,
+      "sha256": "178096bd0c562de82cab4c14a7f34b1c371d581c0fd1f9c3e5cce5ada318ea68"
+    },
+    {
+      "path": "provenance/receipts/tournament/OMNIBIT-TOURNAMENT-RECORD-2026-10-09.hbp",
+      "bytes": 1849,
+      "sha256": "f67652208ac00773241aa59b285b018c19ff6aa3f7dc63a11272446ce6ae05d0"
+    },
+    {
+      "path": "provenance/receipts/tournament/OMNIBIT-TOURNAMENT-RECORD-2026-10-09.hbp.sha256",
+      "bytes": 107,
+      "sha256": "5cc33f048aab877ec58ebf0dce5e1d5cac4d1f8dc27b545d171041c34880e04e"
+    },
+    {
+      "path": "provenance/receipts/tournament/OMNIBIT-TOURNAMENT-RECORD-2026-10-09.hbi",
+      "bytes": 4823,
+      "sha256": "6c1dfdec345ce624f8f660292d91bcbd8c07808cb8fc75dabe6f2ce50f3e206e"
+    },
+    {
+      "path": "provenance/receipts/tournament/OMNIBIT-TOURNAMENT-RECORD-2026-10-09.hbi.sha256",
+      "bytes": 107,
+      "sha256": "b4c6a6a936cc1d601ce94c62eb2e41de4af5f8fc47718125b9a532d586c101ea"
     }
   ]
 }
