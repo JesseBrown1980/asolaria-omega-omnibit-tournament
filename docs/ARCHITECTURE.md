@@ -50,3 +50,25 @@ independent adapter axis rather than a reinterpretation of pixel measurements.
 Stacked glyph cubes may be used as cache-like deterministic tables. Cache hits
 must be reproducible by fixed decoder code plus charged state; a cache, Git
 remote, live service, or hidden filesystem cannot be an uncounted oracle.
+
+## Acer recalculation research cell
+
+The first numeric phrase-catalog recalculation cell is intentionally smaller
+than the executable glyph-language target. It treats the 6-, 12-, and
+24-sector families as a
+42-member union, crossed with independent NORMAL/ANTI and software A/B axes
+for 168 candidates. The 6,912 Cartesian composition is held. Neither number
+is the independent 93,312-evaluation second-cascade body.
+
+Block `i` selects its view from a bounded score over decoded block `i-1`; the
+selector cannot read block `i`, a suffix, or a whole-source hash. Within a
+block, its prime-lag predictor reads only the decoded prefix. The decoder then
+rebuilds two frozen LZW-style catalogs with capacities 1,024 and 4,096 from an
+initial 256-symbol byte alphabet. This validates deterministic catalog
+recalculation, not a trained Wikipedia noun/verb grammar.
+
+Every selector, raw or glyph-coded residual, catalog rule, and archive byte is
+charged. Omega checks unkeyed chain self-consistency but supplies no omitted
+bytes and provides no authenticity without a separately trusted root. A later
+trained-mint catalog must serialize and charge every grammar/generator byte
+needed by standalone decode.

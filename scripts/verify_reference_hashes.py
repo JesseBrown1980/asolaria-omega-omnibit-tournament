@@ -19,6 +19,10 @@ SIDECARS = (
         ROOT / "contracts" / "ARCHITECTURE.hbp",
         ROOT / "contracts" / "ARCHITECTURE.hbp.sha256",
     ),
+    (
+        ROOT / "contracts" / "ACER-GLYPH-CODEC-V1.hbp",
+        ROOT / "contracts" / "ACER-GLYPH-CODEC-V1.hbp.sha256",
+    ),
 )
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 PIN_ROOTS = ("reference", "tools/movable-flashlight", "provenance/receipts")
