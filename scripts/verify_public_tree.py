@@ -22,6 +22,17 @@ MACOS_USER_PATH = re.compile(r"/" + r"Users/[^/\s]+/")
 MOUNTED_WINDOWS_PATH = re.compile(r"/" + r"mnt/[a-z]/", re.IGNORECASE)
 PHYSICAL_DEVICE = re.compile(r"Physical" + r"Drive\d+", re.IGNORECASE)
 ALLOWED_MODES = {"100644", "100755"}
+FORBIDDEN_PATH_COMPONENTS = frozenset(
+    {"corpus", "matrices", "weights", "models", "private", "secrets", "local", "runs"}
+)
+
+
+def forbidden_path_component(relative: str) -> str | None:
+    for component in Path(relative).parts:
+        lowered = component.casefold()
+        if lowered in FORBIDDEN_PATH_COMPONENTS:
+            return lowered
+    return None
 
 
 def indexed_entries() -> list[tuple[str, str]]:
@@ -47,6 +58,12 @@ def main() -> int:
     entries = indexed_entries()
     root_resolved = ROOT.resolve()
     for mode, relative in entries:
+        forbidden_component = forbidden_path_component(relative)
+        if forbidden_component is not None:
+            failures.append(
+                f"{relative}: forbidden public path component {forbidden_component}"
+            )
+            continue
         if mode not in ALLOWED_MODES:
             failures.append(f"{relative}: forbidden git mode {mode}")
             continue

@@ -49,6 +49,10 @@ reviewed executable adapters, derived commitments, allowlisted receipts, and
 Omega bindings. A commitment or catalog address is not authorization to fetch
 the private source behind it.
 
+GitHub Actions results are labeled `MEASURED_GITHUB_CI_PUBLIC_FIXTURE`. They
+validate the public, closed fixture and reviewed reference cells; they are not
+evidence that Acer, Liris, or Relic hardware or a seat-local matrix executed.
+
 ## Preserved axes
 
 - second-cascade topology: 93,312 nodes per pass;

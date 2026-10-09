@@ -1,7 +1,7 @@
 {
   "schema": "ASOLARIA-OMEGA-PUBLIC-REFERENCE-PINS-V1",
   "classification": "PUBLIC_DERIVED_ARTIFACT_PINS",
-  "expected_files": 15,
+  "expected_files": 19,
   "pins": [
     {
       "path": "reference/omega-floor-codec-contract-v0/INTEGRATED-OMEGA-FLOOR-CODEC-CONTRACT.hbp",
@@ -77,6 +77,26 @@
       "path": "provenance/receipts/movable-flashlight/FLASHLIGHT-star_oe9.hbi",
       "bytes": 125499,
       "sha256": "a11f246d70e71e7789ea13f8bd59148ccc9da52c23699f98440716b266a42b62"
+    },
+    {
+      "path": "provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbp",
+      "bytes": 3698,
+      "sha256": "62762804bd4e2f7a244c53fa87baa477827f2134b220f90ded495aa1fdd74279"
+    },
+    {
+      "path": "provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbp.sha256",
+      "bytes": 97,
+      "sha256": "84ad975fcbdbe311f030c56e6e120952d03c78580f5ce5d86d570201bd643b6a"
+    },
+    {
+      "path": "provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbi",
+      "bytes": 10021,
+      "sha256": "53c70c43c6f4c7180c17b99861d4d765335d115dc1e1e4d32342a3be60677cdb"
+    },
+    {
+      "path": "provenance/receipts/acer-glyph-codec-v1/ACER-GLYPH-CODEC-V1-VERIFY.hbi.sha256",
+      "bytes": 97,
+      "sha256": "d4ce44f8c0cd8e6e6d95a5ac942ce80c2611ffb1bd6a0427c33b6b585f53ffc4"
     }
   ]
 }

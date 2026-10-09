@@ -6,6 +6,19 @@
 The frozen weights bank is never mounted or formatted. HBP/HBI/SHA receipts,
 PID-crypto identity, MTP thoughts, and Atlas tiering remain distinct types.
 
+## Seat and vantage
+
+- When the active host account is `rayss`, this is the **Liris/Rayssa**
+  integration seat, not Acer or Relic. Preserve Acer-authored evidence as Acer
+  provenance, but do not turn it into a Liris-local measurement.
+- GitHub Actions runs are `MEASURED_GITHUB_CI_PUBLIC_FIXTURE`. They do not prove
+  an Acer, Liris, or Relic hardware/local-matrix run. Use a seat-owned receipt
+  before changing a pending seat run to measured.
+- Branch names such as `tournament/acer` or `tournament/relic` identify public
+  integration lanes; they do not change the machine on which Codex is running.
+- The reference proof cells use exactly Rust `1.81.0`. Do not silently validate
+  or publish them with a later compiler.
+
 ## Non-negotiable boundaries
 
 - Never commit raw Wikipedia, GGUF/model weights, matrices, keys, credentials,
